@@ -10,11 +10,7 @@ export default function Home() {
     };
 
     socket.onmessage = function (e) {
-      var data = JSON.parse(e.data)
-      var value = data.payload.progress
-      console.log(data)
-      // increaseProgress(value , data.payload.status)
-
+      console.log(e)
     };
     socket.onclose = function (e) {
       console.log('Connection closed');
