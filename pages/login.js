@@ -18,6 +18,8 @@ function login() {
 
     const LoginAPI = async () => {
         try {
+            setLoginAction('Loading...')
+            setdisableAction(true)
             if(username == '') setUsernameCheck(true)
             if (password == '') setPasswordCheck(true)
             const data = {
@@ -26,8 +28,12 @@ function login() {
             }
             const res = await axios.post(urls.URL + 'api/accounts/login', data)
             console.log(res);
+            setLoginAction('Success')
+            setdisableAction(false)
         } catch (error) {
             console.log(error);
+            setLoginAction('Error')
+            setdisableAction(false)
         }
     }
 
