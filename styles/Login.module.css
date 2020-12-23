@@ -1,3 +1,29 @@
 .container{
     height: 100vh;
+    background-image: url('../assets/bg.jpg');
+    background-size: cover;
 }
+
+.heading{
+    margin: 0;
+    padding: 50px;
+    text-align: center;
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+.loginForm{
+    margin: auto 5vw;
+    padding: 10px 0;
+}
+
+.loginBody{
+    display: flex;
+    flex-direction: column;
+}
+
+.loginActions{
+    margin: auto;
+}
+

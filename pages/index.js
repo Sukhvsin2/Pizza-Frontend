@@ -14,7 +14,7 @@ export default function Home() {
 
   const HomeApi = async () => {
     try {
-      const res = await axios(urls.URL);
+      const res = await axios.get(urls.URL);
       const data = res.data;
       setPizza(data);
       setFetching(false)
